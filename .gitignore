@@ -3,6 +3,3 @@ __pycache__/
 push.bat
 
 
-##models
-*.h5
-*.pickle
