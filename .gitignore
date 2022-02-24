@@ -1,0 +1,8 @@
+kooora/
+__pycache__/
+push.bat
+
+
+##models
+*.h5
+*.pickle

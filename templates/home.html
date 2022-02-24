@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تلخيص العناونين بالعربية</title>
+    <style>
+      html,
+      body {
+        min-height: 100%;
+      }
+      body,
+      div,
+      form,
+      input,
+      textarea,
+      p {
+        padding: 0;
+        margin: 0;
+        outline: none;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 14px;
+        color: rgb(7, 0, 0);
+        line-height: 22px;
+      }
+      h1 {
+        position: absolute;
+        margin: 0;
+        font-size: 32px;
+        color: rgb(248, 245, 245);
+        z-index: 2;
+      }
+      .testbox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: inherit;
+        padding: 20px;
+      }
+      form {
+        width: 100%;
+        padding: 20px;
+        border-radius: 6px;
+        background: #fff;
+        box-shadow: 0 0 10px 0 #070003;
+      }
+      .banner {
+        position: relative;
+        height: 210px;
+        background-image: url("/uploads/media/default/0001/01/f1cf9a9068f4bfbdbd9758c45db79203579a3561.jpeg");
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .banner::after {
+        content: "";
+        background-color: #e02e75;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      input,
+      textarea {
+        margin-bottom: 10px;
+        border: 1px solid rgb(212, 34, 34);
+        border-radius: 3px;
+      }
+      input {
+        width: calc(100% - 10px);
+        padding: 5px;
+      }
+      textarea {
+        width: calc(100% - 12px);
+        padding: 5px;
+      }
+
+      textarea::-webkit-input-placeholder {
+          text-align: right;
+      }
+
+      input:hover::placeholder {
+        color: #cc0052;
+      }
+
+      .btn-block {
+        margin-top: 10px;
+        text-align: center;
+      }
+      button {
+        width: 150px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background: #cc0052;
+        font-size: 16px;
+        color: #fff;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #ff0066;
+      }
+    </style>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+
+  </head>
+  <body>
+    <div
+      class="form"
+      ,
+      style="height: 200px; width: 50%; margin: auto; text-align: center"
+    >
+      <form method="POST" action="/predict">
+        <div class="banner" , style="height: 200px">
+          <h1>تلخيص العناوين بالعربية</h1>
+        </div>
+        <br /><br /><br /><br />
+        <div class="Article">
+          <textarea
+                  id="article"
+            name="Article"
+            placeholder="ضع الخبر هنا"
+            required="required"
+            rows="4" cols="50"
+          ></textarea>
+        </div>
+        <br /><br /><br /><br />
+        <button id ='pred' class="btn btn-primary btn-block btn-large">
+          الكلام علي ايه ؟
+        </button>
+        <p class="message"></p>
+      </form>
+    </div>
+  </body>
+</html>
