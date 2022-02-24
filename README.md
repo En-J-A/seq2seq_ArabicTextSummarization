@@ -19,8 +19,13 @@
 
 # Demo
 
-you can view the application from [Here](#)
+You can view the application from [Here](https://msaid-arabictextsummarization.herokuapp.com/)
+<br><br>Note: it may take somtime to bootup the aplication due to model size, so just wait
 
 
 
-
+# ToDo:
+- train for more epochs(currently 50 epoch only)
+- train with more data (currently 35k samples)
+- deploy another model using attention mechanisms
+- deploy another model using Transformers
