@@ -24,18 +24,18 @@ logger = logging.getLogger(__name__)
 
 ####loading models
 
-seq2seq_model = keras.models.load_model('seq2seq_50epoch.h5')
-encoder_model = keras.models.load_model('encoder_model.h5')
-decoder_model = keras.models.load_model('decoder_model.h5')
+seq2seq_model = keras.models.load_model('models/seq2seq_50epoch.h5')
+encoder_model = keras.models.load_model('models/encoder_model.h5')
+decoder_model = keras.models.load_model('models/decoder_model.h5')
 
 
 
 ## loading tokenizers
 
-with open('xtokenizer.pickle', 'rb') as handle:
+with open('tokenizers/xtokenizer.pickle', 'rb') as handle:
     x_tokenizer = pickle.load(handle)
 
-with open('ytokenizer.pickle', 'rb') as handle:
+with open('tokenizers/ytokenizer.pickle', 'rb') as handle:
     y_tokenizer = pickle.load(handle)
 
 reverse_target_word_index = y_tokenizer.index_word
